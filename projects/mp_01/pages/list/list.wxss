@@ -1,1 +1,78 @@
 /* pages/list/list.wxss */
+/* 普通视图的样式 */
+.container1 view {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.container1 view:nth-child(1) {
+    background-color: lightgreen;
+}
+
+.container1 view:nth-child(2) {
+    background-color: lightskyblue;
+}
+
+.container1 view:nth-child(3) {
+    background-color: lightpink;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 滚动视图的样式 */
+.container2 view {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.container2 view:nth-child(1) {
+    background-color: lightgreen;
+}
+
+.container2 view:nth-child(2) {
+    background-color: lightskyblue;
+}
+
+.container2 view:nth-child(3) {
+    background-color: lightpink;
+}
+
+.container2 {
+    margin-top: 20px;
+    margin-left: 14px;
+    border: 1px solid red;
+    /* 给 scroll-view固定高度*/
+    height: 120px;
+    width: 100px;
+}
+
+/* 轮播图的样式 */
+.swiper-container {
+    margin-top: 20px;
+    height: 150px;
+}
+
+.item {
+    height: 100%;
+    line-height: 150px;
+    text-align: center;
+}
+
+swiper-item:nth-child(1) .item {
+    background-color: lightgreen;
+}
+
+swiper-item:nth-child(2) .item {
+    background-color: lightskyblue;
+}
+
+swiper-item:nth-child(3) .item {
+    background-color: lightpink;
+}

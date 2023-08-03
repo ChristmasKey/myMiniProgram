@@ -1,23 +1,24 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!-- 动态绑定内容 -->
+<view>{{info}}</view>
+
+<!-- 动态绑定属性 -->
+<image src="{{imgSrc}}" mode="widthFix" />
+
+<!-- 三元运算 -->
+<view>{{randomNum1 >= 5 ? '5以上' : '5以下'}}</view>
+
+<!-- 算术运算 -->
+<view>{{randomNum2 * 100}}</view>
+
+<!-- target和currentTarget的区别 -->
+<view class="outer-view" bind:tap="outerHandler">
+    <button type="primary">按钮</button>
 </view>
+
+<!-- 在事件处理函数中为data中的数据赋值 -->
+<text>{{count}}</text>
+<button type="primary" bind:tap="countChange">+</button>
+
+<!-- 事件传参 -->
+<button type="default" bind:tap="countChange2" data-step="{{2}}">+2</button>

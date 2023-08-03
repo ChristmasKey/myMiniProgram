@@ -1,0 +1,16 @@
+<!--pages/button/button.wxml-->
+<!-- 通过type属性指定按钮颜色类型 -->
+<view>===========type属性============</view>
+<button>默认按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+
+<!-- 通过size属性指定按钮颜色尺寸 -->
+<view>============size属性============</view>
+<button size="default">默认按钮</button>
+<button size="mini">小尺寸按钮</button>
+
+<!-- 通过plain属性镂空按钮 -->
+<view>===========plain属性=============</view>
+<button plain type="primary">镂空按钮</button>
+<button plain type="warn">镂空按钮</button>
