@@ -4,3 +4,10 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+input {
+    border: 1px solid #eee;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}

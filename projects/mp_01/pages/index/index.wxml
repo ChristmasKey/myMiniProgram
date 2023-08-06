@@ -22,3 +22,19 @@
 
 <!-- 事件传参 -->
 <button type="default" bind:tap="countChange2" data-step="{{2}}">+2</button>
+
+<input type="text" bindinput="inputHandler" />
+
+<!-- 数据同步 -->
+<input value="{{msg}}" type="text" bindinput="inputHandler2" />
+
+<!-- 条件渲染 -->
+<view wx:if="{{type === 1}}"> 男 </view>
+<view wx:elif="{{type === 2}}"> 女 </view>
+<view wx:else> 保密 </view>
+
+<!-- 结合 <block> 使用 -->
+<block wx:if="{{true}}">
+    <view> view 1 </view>
+    <view> view 2 </view>
+</block>
