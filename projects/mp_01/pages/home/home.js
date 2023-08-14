@@ -9,10 +9,55 @@ Page({
   },
 
   /**
+   * 发起GET数据请求
+   */
+  getInfo() {
+      wx.request({
+        url: 'https://www.escook.cn/api/get',
+        method: 'GET',
+        data: {
+            name: 'zs',
+            age: 22
+        },
+        success: res => {
+            console.log(res.data);
+        }
+      })
+  },
+
+  /**
+   * 发起POST请求
+   */
+  postInfo() {
+    wx.request({
+        url: 'https://www.escook.cn/api/post',
+        method: 'POST',
+        data: {
+            name: 'ls',
+            gender: '男'
+        },
+        success: res => {
+            console.log(res.data);
+        }
+      })
+  },
+
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+      this.getSwiperList()
+      this.getGridList()
+  },
 
+  // 获取轮播图的数据
+  getSwiperList() {
+      console.log('获取轮播图的数据');
+  },
+
+  // 获取九宫格的数据
+  getGridList() {
+      console.log('获取九宫格的数据');
   },
 
   /**

@@ -1,2 +1,4 @@
 <!--pages/home/home.wxml-->
 <text>这里是首页</text>
+<button bind:tap="getInfo">发起GET请求</button>
+<button bind:tap="postInfo" type="primary">发起POST请求</button>
