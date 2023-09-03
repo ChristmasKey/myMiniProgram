@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+<!-- 轮播图区域 -->
+<swiper circular indicator-dots>
+    <swiper-item wx:for="{{swiperList}}" wx:key="id">
+        <image src="{{item.image}}" />
+    </swiper-item>
+</swiper>
+
+<!-- 九宫格区域 -->
+<view class="grid-list">
+    <view class="grid-item" wx:for="{{gridList}}" wx:key="id">
+        <image src="{{item.icon}}" />
+        <text>{{item.name}}</text>
+    </view>
+</view>
+
+<!-- 图片区域 -->
+<view class="img-box">
+    <image src="https://i2.hdslb.com/bfs/archive/8750ccedec917d1eb3a45ed2e6115e548c8f68e7.png@672w_378h_1c_!web-home-common-cover.avif" mode="widthFix"/>
+    <image src="https://i1.hdslb.com/bfs/archive/6f2dd642914fd9e9af059f07078d5e3f5ec172d9.jpg@672w_378h_1c_!web-home-common-cover.avif" mode="widthFix"/>
+</view>
