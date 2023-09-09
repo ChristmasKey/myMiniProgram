@@ -1,2 +1,6 @@
 <!--pages/message/message.wxml-->
 <text>pages/message/message.wxml</text>
+
+<view>count值是：{{count}}</view>
+
+<button bind:tap="addCount">计数按钮</button>

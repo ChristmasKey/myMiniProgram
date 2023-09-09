@@ -3,3 +3,5 @@
 <navigator open-type="navigateBack">后退</navigator>
 
 <button bind:tap="goBack">后退</button>
+
+<text>姓名：{{query.name}}</text>

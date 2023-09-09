@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        // 导航传递过来的参数对象
+        query: {}
     },
 
     // 通过编程式导航实现 后退 效果
@@ -19,7 +20,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        // options 就是导航传递过来的参数对象
+        console.log('tags', options);
+        this.setData({
+            query: options
+        })
     },
 
     /**

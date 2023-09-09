@@ -22,6 +22,12 @@ Page({
         })
     },
 
+    gotoInfo2() {
+        wx.navigateTo({
+          url: '/pages/info/info?name=ls&gender=男',
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -68,7 +74,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-
+        console.log("触发了上拉触底的事件");
     },
 
     /**
