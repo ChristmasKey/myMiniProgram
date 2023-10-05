@@ -1,34 +1,29 @@
-// pages/message/message.js
+// pages/shoplist/shoplist.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        count: 0,
-        username: 'zhangsan',
-        country: 'CHINA'
-    },
-
-    // 计数按钮的点击事件
-    addCount() {
-        this.setData({
-            count: this.data.count + 1
-        })
+        query: {}
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({
+            query: options
+        })
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-
+        wx.setNavigationBarTitle({
+            title: this.data.query.title,
+          })
     },
 
     /**
@@ -56,13 +51,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        console.log('触发了message页面的下拉刷新');
-        this.setData({
-            count: 0
-        })
-        
-        // 停止下拉刷新的动画效果
-        wx.stopPullDownRefresh()
+
     },
 
     /**

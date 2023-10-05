@@ -4,3 +4,18 @@
 <view>count值是：{{count}}</view>
 
 <button bind:tap="addCount">计数按钮</button>
+
+<view>{{m1.toUpper(username)}}</view>
+
+<!-- 内嵌 wxs -->
+<wxs module="m1">
+    // 大写转换函数
+    module.exports.toUpper = function (str) {
+        return str.toUpperCase()
+    }
+</wxs>
+
+<!-- 外联 wxs -->
+<view>{{m2.toLower(country)}}</view>
+
+<wxs src="../../utils/tools.wxs" module="m2"/>
